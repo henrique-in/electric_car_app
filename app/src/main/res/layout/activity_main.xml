@@ -142,8 +142,55 @@
         />
 
 
+    <EditText
+         android:id="@+id/et_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:ems="10"
+        android:hint="@string/price_kwh"
+        android:maxLength="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_recharge_value"
+        />
+
+    <EditText
+        android:id="@+id/et_distance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/travelled_km"
+        android:maxLength="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@id/et_value"
+        app:layout_constraintStart_toStartOf="@id/et_value"
+        app:layout_constraintTop_toBottomOf="@id/et_value"
+        />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@id/et_distance"
+        app:layout_constraintStart_toStartOf="@id/et_distance"
+        app:layout_constraintEnd_toEndOf="@id/et_distance"
+
+        />
 
 
+    <TextView
+        android:id="@+id/tv_result_autonomy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
