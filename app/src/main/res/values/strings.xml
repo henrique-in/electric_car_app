@@ -10,4 +10,5 @@
     <string name="price_kwh">Preço Kwh</string>
     <string name="travelled_km">Km Percorrido</string>
     <string name="calculate">Calcular</string>
+    <string name="calculate_autonomy">Calcular Autonomia</string>
 </resources>

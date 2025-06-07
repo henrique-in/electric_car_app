@@ -1,7 +1,7 @@
-package com.org.eletriccarapp
+package com.org.eletriccarapp.presentation
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -9,13 +9,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.org.eletriccarapp.R
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var value: EditText
-    lateinit var distance: EditText
-    lateinit var btnCalculate: Button
-    lateinit var resultAutonomy: TextView
+
+    lateinit var btnNavigate: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,22 +32,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setupViews(){
-        value = findViewById(R.id.et_value)
-        distance = findViewById(R.id.et_distance)
-        btnCalculate = findViewById(R.id.btn_calculate)
-        resultAutonomy = findViewById(R.id.tv_result_autonomy)
+
+        btnNavigate = findViewById(R.id.btnNavigate)
+
     }
 
     fun setupListeners(){
-        btnCalculate.setOnClickListener {
-            val price = value.text.toString().toFloat()
-            val kmDistance = distance.text.toString().toFloat()
-
-
-            val result = price/kmDistance
-
-            resultAutonomy.text = "$result"
-
+        btnNavigate.setOnClickListener {
+            startActivity(Intent(this,CalculateAutonomyActivity::class.java))
         }
     }
+
+
+
 }
